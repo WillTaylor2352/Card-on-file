@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html id="htmldoc">
+<head>
+	<meta charset="UTF-8">
+	<title>COF Test</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!-- 
+
+GENERAL NOTES:
+	SCRIPTS AND JS UTILIZED:
+		CRYPT-JS: 
+			1. 	SHA-256: Used for password verification. 
+				Password entered must match a hash of the selected password
+			
+			2.	CIPHER: Used to encrypt customer cards for local storage. 
+				Forces customer data to be encrypted until the site is unlocked via password.
+		
+		LOCAL SCRIPTS:
+		
+	
+
+	
+-->
+	<!-- import jquery -->
+	<script
+		src="https://code.jquery.com/jquery-3.2.1.js"
+		integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+		crossorigin="anonymous">
+	</script>
+	
+	<!-- import hashing scripts -->
+	<script src="scripts/sha256.js"></script>
+	
+	<!-- link to my js file -->
+	<script src="scripts/script.js"></script>
+</head>
+
+<body>
+	<div id="mainPage">
+		<div id="frm">
+			
+			<table>
+				<tr>
+					<th>Cards on File: </th>
+					<th></th>
+				</tr>
+				<tr>
+					<td> <label for="csrch">Search: </label> </td>
+					<td> <input name="csrch" id="custSearch" > </td>
+				</tr>
+				<tr>
+					<td> <label for="cNme">Name: </label> </td>
+					<td> <input name="cNme" id="custName" disabled> </td>
+				</tr>
+				<tr>
+					<td> <label for="cCrd">Card Number: </label> </td>
+					<td> <input name="cCrd" id="custCard" disabled> </td>
+				</tr>
+				<tr>
+					<td> <label for="cExp">Expiration: </label> </td>
+					<td> <input name="cExp" id="custExpiration" disabled> </td>
+				</tr>
+				<tr>
+					<td> <label for="cCVC">CVC: </label> </td>
+					<td> <input name="cCVC" id="custCVC" disabled> </td>
+				</tr>
+				<tr>
+					<td> <label for="cAdd">Address: </label> </td>
+					<td> <input name="cAdd" id="custAddress" disabled> </td>
+				</tr>
+				<tr>
+					<td> <label for="cZip">Zip Code: </label> </td>
+					<td> <input name="cZip" id="custZipCode" disabled> </td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div id="btns">
+							<input type="button" id="clrBtn" value="Clear">
+							<input type="button" id="updBtn" value="Update">
+							<input type="button" id="admBtn" value="Add 1 Min">
+							<input type="button" id="savBtn" value="Save">
+							<input type="button" id="addBtn" value="Add New">
+						</div>
+					</td>
+					
+				</tr>
+			</table>
+			
+			
+			<p id="test"></p>
+			
+			<div id="timer">
+				
+			</div>
+		</div>	
+		
+		
+	</div>
+	
+	<div id="login">
+		<table>	
+			<tr>
+				<td> <label for="loginForm">Password: </label> </td>
+				<td>	
+					<form id="loginForm" name="loginForm">
+						<input type="password" id="loginInput">
+					</form>
+				</td>
+			</tr>
+		</table>
+			<!--<input type="button" id="submit" value="submit" >-->
+	</div>
+	
+</body>
+
+</html>

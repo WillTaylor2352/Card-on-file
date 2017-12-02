@@ -1,0 +1,26 @@
+tr:nth-child(odd) {
+	background-color: #e8e8e8;
+	
+}
+table{
+	border-collapse:collapse;
+    border: 1px solid black;
+	margin:auto;
+	
+}
+td, th{
+	padding: 15px;
+	
+}
+#mainPage {
+	display:none;
+	
+}
+#login {
+	margin:auto;
+	
+}
+#btns{
+	margin:auto;
+	padding-top:5px
+}
